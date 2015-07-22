@@ -1,0 +1,127 @@
+html {
+  font-family: 'Menlo', 'Inconsolata', 'Consolas', 'Monaco', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background-color: #111;
+  color: #fafafa;
+}
+body {}
+
+.url { color: #66D9EF; }
+
+.message[type=join] .url,
+.message[type=quit] .url {
+	color: #66D9EF;
+}
+.address {}
+.highlight {
+  color: white;
+  font-weight: bold;
+}
+
+.line {
+  padding-bottom: 1px; 
+  clear: left; 
+  line-height: 1.3em; 
+  border-bottom:1px solid #3d3d3d;
+}
+
+body.console .line {
+  clear: both;
+}
+
+.line[alternate=even] {}
+.line[alternate=odd] {}
+.line[highlight=true] {background: #333;}
+
+.line[type=action] .sender:before {
+  content: "★ ";
+  font-size: 0.65em;
+  white-space: nowrap;
+  color: #E3E3E3;
+}
+
+.time { 
+  color: #999; 
+  float: right; 
+  margin-left: 1em; 
+  margin-right: 4px; 
+  margin-top: .4em;
+}
+
+body.console .time {
+  margin-top: 0;
+}
+
+.place { 
+  color: #3387bc; 
+}
+
+body.normal .sender, body.normal .place {
+	display: block;
+	width: 8.5em;
+	margin-right: 0.5em;
+	white-space:nowrap;
+	overflow: hidden;
+	float: left;
+	text-align: right;
+	margin-top: .4em;
+}
+
+body.normal .line.text {
+	background-color: #272822;
+}
+
+body.normal .line.text[highlight=true] {
+  background: #555;
+}
+
+body.normal .message {
+  display: block;
+  text-align: left;
+  margin-left: 10em;
+  margin-right: 9ex;
+  word-wrap: break-word;
+  -khtml-line-break: after-white-space;
+  -khtml-nbsp-mode: space;
+  padding: .4em 0 .2em 0;
+}
+
+
+.sender[type=normal] { color: #DDA0DD; }
+.sender[type=myself] { color: #A6E22E; }
+.sender[type=normal][colornumber='0'] { color: #1abc9c; }
+.sender[type=normal][colornumber='1'] { color: #8475eb; }
+.sender[type=normal][colornumber='2'] { color: #B05CD3; }
+.sender[type=normal][colornumber='3'] { color: #e74c3c; }
+.sender[type=normal][colornumber='4'] { color: #D5CD23; }
+.sender[type=normal][colornumber='5'] { color: #6AABEC; }
+
+.sender[type=normal][colornumber='6'] { color: #fc0; }
+
+.sender[type=normal][colornumber='7'] { color: #66CDAA; }
+.sender[type=normal][colornumber='8'] { color: #FF69B4; }
+.sender[type=normal][colornumber='9'] { color: #BA55D3; }
+.sender[type=normal][colornumber='10'] { color: #D75668; }
+.sender[type=normal][colornumber='11'] { color: #90EE90; }
+.sender[type=normal][colornumber='12'] { color: #e8b173; }
+.sender[type=normal][colornumber='13'] { color: #93C9FB; }
+.sender[type=normal][colornumber='14'] { color: #6178DF; }
+.sender[type=normal][colornumber='15'] { color: #F989FD; }
+
+.message[type=privmsg] {}
+.message[type=notice] { color: #888; }
+.message[type=action] { color: #bcce8b;}
+
+.message[type=system], .message[type=join], .message[type=part], .message[type=kick],
+.message[type=quit], .message[type=kill], .message[type=nick], .message[type=mode],
+.message[type=topic], .message[type=invite], .message[type=wallops] {
+  color: #444;
+  text-align: right;
+}
+.message[type=reply] { color: #aaa; }
+
+.message[type=error], .message[type=error_reply] { color: #f67b37; }
+.message[type=dcc_send_send] { color: #c5af75; }
+.message[type=dcc_send_receive] { color: #f9ee98; }
+.message[type=debug_send] { color: #8996a8; }
+.message[type=debug_receive] { color: #afc4db; }
